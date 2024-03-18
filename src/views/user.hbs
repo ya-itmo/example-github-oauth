@@ -1,0 +1,12 @@
+<div><a href="/">Вернуться на главную</a></div>
+<br>
+<div class="display: flex">
+    <div>ID: {{ user.id }}</div>
+    <div>Username: {{ user.username }}</div>
+    {{#if user.displayName}}
+        <div>Name: {{ user.displayName }}</div>
+    {{/if}}
+    {{#if user.emails}}
+        <div>Email: {{ user.emails.0.value }}</div>
+    {{/if}}
+</div>
